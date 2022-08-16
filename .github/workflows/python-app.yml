@@ -36,7 +36,12 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Create Installer
       run: |
-        pyinstaller myrobotmc5.py
+        pyinstaller --onefile myrobotmc5.py
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: MyRobotMC5
+        path: dist/myrobotmc5
         
 ##    Nothing to test currently...        
 #    - name: Test with pytest
