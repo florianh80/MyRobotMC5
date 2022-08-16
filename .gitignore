@@ -1,0 +1,9 @@
+.idea/
+MyRobotMC5.spec
+__pycache__/
+build.sh
+build/
+dist/
+main.spec
+myrobotmc5.spec
+setup.py
